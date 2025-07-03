@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Vishva</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+   
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="#" > Home</a></li>
+            <li><a href="#about" >About</a></li>
+            <li><a href="#skills" >Skills</a></li>
+            <li><a href="#projects" >Projects</a></li>
+            <li><a href="#contact" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" data-aos="fade-up">
+        <h1>Hi, I'm <span>Vishva</span></h1>
+        <h2 class="typed-text"></h2>
+        <p>I craft beautiful, functional web experiences with modern technologies.<br>Passionate about clean code,
+            innovative solutions, and bringing ideas to life.</p>
+        <div class="hero-buttons">
+
+            <a href="VISHVA M_resume.pdf" download><button class="outline">Download Resume</button></a>
+        </div>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+        <h2 style="text-align: center;">About <span>Me</span></h2>
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="vishva og.jpg" alt="My profile picture">
+            </div>
+
+
+            <div class="about-text">
+                <h3>Passionate Developer & Creative Problem Solver</h3>
+                <p>A fresh graduate with a relentless drive to learn, adapt, and deliver great results. Passionate 
+about transforming ideas into powerful solutions and continuously improving along the way. 
+Ready to start strong and grow fast. </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="skills" data-aos="fade-up">
+        <h2 style="text-align: center;">My <span>Skills</span></h2>
+        <div class="skills-container">
+
+            <div class="skill-box frontend">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>Html, Css, Javascript – Expert</li>
+                    <li>Tailwind CSS – Intermediate</li>
+                    <li>Bootstrap - Beginner</li>
+                    <li>React - Beginner</li>
+                </ul>
+            </div>
+
+            <div class="skill-box backend">
+                <h3>Backend</h3>
+                <ul>
+                    <li>Python – Intermediate</li>
+                    <li>C++, C# - Intermediate</li>
+                    <li>PHP - Advanced</li>
+                    <li>MySql – Advanced</li>
+                    <li>MongoDB – Intermediate</li>
+                </ul>
+            </div>
+
+            <div class="skill-box tools">
+                <h3>Tools & Others</h3>
+                <ul>
+                    <li>Git – Intermediate</li>
+                    <li>Figma – Intermediate</li>
+                    <li>Canva – Intermediate</li>
+                    <li>Blender – Intermediate</li>
+                    <li>Unity – Intermediate</li>
+                    <li>Unreal Engine – Beginner</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projects" data-aos="fade-left">
+        <h2 style="text-align: center;">Featured <span>Projects</span></h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>E-Commerce Platform</h3>
+                <p>React, PHP, MySql</p>
+            </div>
+            <div class="project">
+                <h3>Freelance Job Portal</h3>
+                <p>Html, Css, Javascript, PHP, MySql</p>
+            </div>
+           
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Framer Motion, Minimal UI</p>
+            </div>
+        </div>
+        
+    </section>
+
+   <section id="contact" data-aos="fade-up">
+    <h2 style="text-align: center;">Get In <span>Touch</span></h2>
+<h3 style="text-align: center;">Contact :</h3>
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+
+        <div class="contact-info">
+            <p>Email: amarvishwa19372@gmail.com</p>
+            <p>Phone: +91 9361948817</p>
+            <p>Location: Tamilnadu, India</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/vishva-m-591313295/">LinkedIn</a>
+                <a href="https://github.com/Vishva-prog">GitHub</a>
+                <a href="https://www.instagram.com/_.__vishva__._/?__pwa=1#">Instagram</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <footer>
+        © 2025 Vishva. Made with ❤️ and lots of coffee.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const words = ["Full Stack Developer", "UI/UX Designer/Developer", "Unity Developer"];
+        let index = 0, wordIndex = 0;
+        const typedText = document.querySelector(".typed-text");
+
+        function typeEffect() {
+            if (wordIndex < words[index].length) {
+                typedText.textContent += words[index][wordIndex++];
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(() => {
+                    typedText.textContent = "";
+                    wordIndex = 0;
+                    index = (index + 1) % words.length;
+                    typeEffect();
+                }, 2000);
+            }
+        }
+
+        typeEffect();
+    </script>
+</body>
+
+</html>
